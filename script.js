@@ -1,4 +1,4 @@
-// Set your target date here (YYYY-MM-DDTHH:MM:SS format)
+// Countdown Timer
 const launchDate = new Date("2025-06-01T00:00:00").getTime();
 
 const countdown = () => {
@@ -22,3 +22,25 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
+
+// Theme Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+const applyTheme = (mode) => {
+  body.classList.remove("dark-mode", "light-mode");
+  body.classList.add(mode);
+  themeToggle.textContent = mode === "light-mode" ? "🌙" : "☀️";
+  localStorage.setItem("theme", mode);
+};
+
+themeToggle.addEventListener("click", () => {
+  const newTheme = body.classList.contains("dark-mode") ? "light-mode" : "dark-mode";
+  applyTheme(newTheme);
+});
+
+// On load
+const savedTheme = localStorage.getItem("theme") || "dark-mode";
+applyTheme(savedTheme);
+
+
