@@ -20,17 +20,6 @@ body {
   max-width: 500px;
 }
 
-header {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-}
-
-.logo {
-  height: 40px;
-  width: auto;
-}
 
 
 h1 {
@@ -91,3 +80,34 @@ p {
     transform: translateY(0);
   }
 }
+
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.contact-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.contact-text a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.contact-text a:hover {
+  text-decoration: underline;
+}
+
