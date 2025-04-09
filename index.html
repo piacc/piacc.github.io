@@ -4,13 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="dark-mode">
   <header>
     <div class="header-container">
-      <img src="logo.png" alt="Logo" class="logo" />
-      <span class="contact-text">Say hello! <a href="mailto:info@ornova.co">info@ornova.co</a></span>
+      <img src="images/logo-5.png" alt="Logo" class="logo" />
+      <div class="right-header">
+        <span class="contact-text">Say hello! <a href="mailto:info@ornova.co">info@ornova.co</a></span>
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">☀️</button>
+      </div>
     </div>
   </header>
 
@@ -26,6 +32,11 @@
       </div>
     </div>
   </main>
+
+   <!-- Mobile-specific footer content -->
+   <div class="mobile-footer">
+    <span class="contact-text-footer">Say hello! <a href="mailto:info@ornova.co">info@ornova.co</a></span>
+  </div>
 
   <script src="script.js"></script>
 </body>
