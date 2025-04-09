@@ -20,6 +20,19 @@ body {
   max-width: 500px;
 }
 
+header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
