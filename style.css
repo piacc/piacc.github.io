@@ -6,9 +6,9 @@
 
 body {
   min-height: 100vh;
-  background: #f7f9fc;
+  background: #000;
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #fff;
   margin: 0;
   padding: 0;
   position: relative;
@@ -34,15 +34,16 @@ header {
 .logo {
   height: 40px;
   width: auto;
+  filter: brightness(0) invert(1); /* Makes a dark logo white-ish */
 }
 
 .contact-text {
   font-size: 0.9rem;
-  color: #555;
+  color: #ccc;
 }
 
 .contact-text a {
-  color: #007acc;
+  color: #4dc3ff;
   text-decoration: none;
 }
 
@@ -66,12 +67,12 @@ header {
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #111;
+  color: #fff;
 }
 
 p {
   font-size: 1.2rem;
-  color: #555;
+  color: #aaa;
   margin-bottom: 2rem;
 }
 
@@ -82,22 +83,22 @@ p {
 }
 
 .countdown div {
-  background: #fff;
+  background: #111;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
   flex: 1;
 }
 
 .countdown span {
   font-size: 2rem;
   display: block;
-  color: #111;
+  color: #fff;
 }
 
 .countdown small {
   font-size: 0.8rem;
-  color: #777;
+  color: #888;
 }
 
 /* Fade-in animation */
