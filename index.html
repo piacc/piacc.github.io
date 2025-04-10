@@ -14,15 +14,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="dark-mode">
-  <header>
-    <div class="header-container">
-      <img src="images/logo-5.png" alt="Logo" class="logo" />
-      <div class="right-header">
-        <span class="contact-text">Say hello! <a href="mailto:info@ornova.co">info@ornova.co</a></span>
-        <button id="theme-toggle" aria-label="Toggle dark/light mode">☀️</button>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="header-container">
+          <img src="images/logo-5.png" alt="Logo" class="logo" />
+          <div class="right-header">
+            <span class="contact-text">Say hello! <a href="mailto:info@ornova.co">info@ornova.co</a></span>
+      
+            <!-- Theme Toggle -->
+            <div class="theme-switch-wrapper">
+              <input type="checkbox" id="theme-switch" />
+              <label for="theme-switch" class="theme-switch">
+                <span class="icon sun">☀️</span>
+                <span class="icon moon">🌙</span>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </header>
+      
 
   <main class="main-content">
     <div class="container">
