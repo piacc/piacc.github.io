@@ -244,6 +244,7 @@ p {
   #theme-switch:checked + .theme-switch .sun {
     opacity: 1;
   }
+
   
   #theme-switch:checked + .theme-switch .moon {
     opacity: 1;
@@ -308,7 +309,6 @@ body.light-mode .contact-text-footer a {
         overflow: hidden;
         height: 100%;
         touch-action: none; /* Optional: prevents scrolling with touch */
-        position: fixed; /* Extra layer of anti-scroll */
         width: 100%;
     }
     
@@ -326,8 +326,8 @@ p {
 }
 
 h1 {
-    font-size: 2.4rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
 
 }
 
