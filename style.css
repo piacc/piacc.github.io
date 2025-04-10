@@ -249,6 +249,7 @@ p {
     opacity: 1;
   }
 
+
   body.dark-mode .contact-text a {
     color: #fff;
 }
@@ -303,10 +304,19 @@ body.light-mode .contact-text-footer a {
 
 @media (max-width: 768px) {
 
-.contact-text{
+    html, body {
+        overflow: hidden;
+        height: 100%;
+        touch-action: none; /* Optional: prevents scrolling with touch */
+        position: fixed; /* Extra layer of anti-scroll */
+        width: 100%;
+    }
+    
+    .contact-text{
 
     display: none;
 }
+
 
 p {
     font-size: 1rem;
@@ -321,6 +331,11 @@ h1 {
 
 }
 
+.countdown span {
+    font-size: 1rem;
+
+}
+
 .mobile-footer {
     display: block!important;
 }
@@ -332,5 +347,21 @@ h1 {
 
 
 
+}
+
+  .container {
+
+    max-width: 95%;
+}
+
+.countdown {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  .countdown div {
+    flex: 0 1 calc(50% - 10px); /* 2 per row with spacing */
+  }
 }
 
