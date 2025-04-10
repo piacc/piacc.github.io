@@ -7,12 +7,21 @@
 }
 
 body.light-mode {
-    --bg-color: #fff;
+    --bg-color: linear-gradient(135deg, #f5f7fa, #e3eaf2);
     --text-color: #000;
     --secondary-color: #555;
     --accent-color: #007acc;
-    --card-bg: #f2f2f2;
+    --card-bg: rgba(255, 255, 255, 0.4);
 }
+
+body.dark-mode {
+    --bg-color: linear-gradient(135deg, #1f1c2c, #928dab);
+    --text-color: #fff;
+    --secondary-color: #aaa;
+    --accent-color: #4dc3ff;
+    --card-bg: rgba(0, 0, 0, 0.4);
+}
+
 
 * {
     margin: 0;
@@ -21,15 +30,27 @@ body.light-mode {
 }
 
 body {
-    min-height: 100svh;
+    min-height: 100vh;
     background: var(--bg-color);
     font-family: Arial, sans-serif;
     color: var(--text-color);
     margin: 0;
-    padding: 0;
+    padding: 0px;
     position: relative;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.6s ease, color 0.3s ease;
 }
+
+.container {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2), inset -2px -2px 5px rgba(255,255,255,0.1);
+}
+
 
 /* Poppins font for heading, subheading, and countdown */
 h1, p, .countdown span {
@@ -89,22 +110,6 @@ body.light-mode .logo {
     text-decoration: underline;
 }
 
-#theme-toggle {
-    background: none;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: 5px 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-#theme-toggle:hover {
-    background: var(--accent-color);
-    color: #fff;
-}
-
 .main-content {
     height: 100vh;
     display: flex;
@@ -114,9 +119,6 @@ body.light-mode .logo {
     text-align: center;
 }
 
-.container {
-    max-width: 500px;
-}
 
 h1 {
     font-size: 3rem;
@@ -125,7 +127,7 @@ h1 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--secondary-color);
     margin-bottom: 2rem;
 }
@@ -170,13 +172,100 @@ p {
     animation-delay: 0.6s;
 }
 
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ .theme-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 32px;
+        background: #ccc;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: background 0.3s;
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2), inset -2px -2px 5px rgba(255,255,255,0.4);
+
+      
+  }
+
+  body.dark-mode .theme-switch {
+    background: #333;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.6), inset -2px -2px 5px rgba(255,255,255,0.1);
+  }
+  
+  
+  .theme-switch .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    z-index: 2;
+    color: #666;
+    transition: opacity 0.3s;
+  }
+  
+  .theme-switch .sun {
+    left: 10px;
+  }
+  
+  .theme-switch .moon {
+    right: 10px;
+  }
+  
+  .theme-switch .slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s;
+    z-index: 3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #theme-switch {
+    display: none;
+  }
+  
+  #theme-switch:checked + .theme-switch {
+    background: #444;
+  }
+  
+  #theme-switch:checked + .theme-switch .slider {
+    transform: translateX(28px);
+  }
+  
+  #theme-switch:checked + .theme-switch .sun {
+    opacity: 1;
+  }
+  
+  #theme-switch:checked + .theme-switch .moon {
+    opacity: 1;
+  }
+
+  body.dark-mode .contact-text a {
+    color: #fff;
+}
+
+body.light-mode .contact-text a {
+    color: var(--accent-color);
+}
+
+  
+
 /* Mobile-specific footer styles */
 .mobile-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: transparent;
+    color: var(--secondary-color);
     padding: 40px 0;
     text-align: center;
     display: none; /* Hide by default */
@@ -190,6 +279,14 @@ p {
 .mobile-footer a {
     color: var(--accent-color);
     text-decoration: none;
+}
+
+body.dark-mode .contact-text-footer a {
+    color: #fff;
+}
+
+body.light-mode .contact-text-footer a {
+    color: var(--accent-color);
 }
 
 .mobile-footer a:hover {
@@ -212,14 +309,27 @@ p {
 }
 
 p {
+    font-size: 1rem;
     padding-left: 30px;
     padding-right: 30px;
+
+}
+
+h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
 
 }
 
 .mobile-footer {
     display: block!important;
 }
+
+.logo {
+    height: 25px;
+    width: auto;
+    filter: brightness(0) invert(1);
+
 
 
 }
