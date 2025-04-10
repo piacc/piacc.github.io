@@ -7,8 +7,8 @@ const countdown = () => {
 
   const second = 1000;
   const minute = second * 60;
-  const hour   = minute * 60;
-  const day    = hour * 24;
+  const hour = minute * 60;
+  const day = hour * 24;
 
   const d = Math.floor(gap / day);
   const h = Math.floor((gap % day) / hour);
@@ -23,24 +23,22 @@ const countdown = () => {
 
 setInterval(countdown, 1000);
 
-// Theme Toggle
-const themeToggle = document.getElementById("theme-toggle");
+// Theme Toggle Switch
+const themeSwitch = document.getElementById("theme-switch");
 const body = document.body;
 
 const applyTheme = (mode) => {
   body.classList.remove("dark-mode", "light-mode");
   body.classList.add(mode);
-  themeToggle.textContent = mode === "light-mode" ? "🌙" : "☀️";
   localStorage.setItem("theme", mode);
+  themeSwitch.checked = mode === "dark-mode";
 };
 
-themeToggle.addEventListener("click", () => {
-  const newTheme = body.classList.contains("dark-mode") ? "light-mode" : "dark-mode";
+themeSwitch.addEventListener("change", () => {
+  const newTheme = themeSwitch.checked ? "dark-mode" : "light-mode";
   applyTheme(newTheme);
 });
 
 // On load
 const savedTheme = localStorage.getItem("theme") || "dark-mode";
 applyTheme(savedTheme);
-
-
