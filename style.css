@@ -295,6 +295,22 @@ body.light-mode .contact-text-footer a {
     text-decoration: underline;
 }
 
+.desktop-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+  
+  .copyright-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+  }
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -341,7 +357,7 @@ h1 {
 }
 
 .logo {
-    height: 22px;
+    height: 25px;
     width: auto;
     filter: brightness(0) invert(1);
 
@@ -363,5 +379,14 @@ h1 {
   .countdown div {
     flex: 0 1 calc(50% - 10px); /* 2 per row with spacing */
   }
-}
+
+  @media (max-width: 768px) {
+    .desktop-footer {
+      display: none;
+    }
+
+    .theme-switch .icon {
+        font-size: 13px;
+      }
+    }
 
