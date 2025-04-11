@@ -311,6 +311,35 @@ body.light-mode .contact-text-footer a {
     color: var(--secondary-color);
   }
 
+  .return-home-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(13, 165, 251, 0.4);
+  }
+
+  body.light-mode .return-home-btn{
+    background: linear-gradient(135deg, #0da5fb, #414df9);
+
+  }
+
+  body.dark-mode .return-home-btn{
+    background: var(--card-bg);
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+
+  }
+  
+  .return-home-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(65, 77, 249, 0.5);
+  }
+
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -388,4 +417,3 @@ h1 {
         font-size: 14px;
       }
     }
-
