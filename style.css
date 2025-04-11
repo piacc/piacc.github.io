@@ -380,7 +380,6 @@ h1 {
     flex: 0 1 calc(50% - 10px); /* 2 per row with spacing */
   }
 
-  @media (max-width: 768px) {
     .desktop-footer {
       display: none;
     }
