@@ -24,20 +24,24 @@ const countdown = () => {
 setInterval(countdown, 1000);
 
 // Theme Toggle Switch
-const themeSwitch = document.getElementById("theme-switch");
+const themeSwitch = document.getElementById("theme-toggle");
 const body = document.body;
 
 const applyTheme = (mode) => {
   body.classList.remove("dark-mode", "light-mode");
   body.classList.add(mode);
   localStorage.setItem("theme", mode);
-  themeSwitch.checked = mode === "dark-mode";
+  if (themeSwitch) {
+    themeSwitch.checked = mode === "dark-mode";
+  }
 };
 
-themeSwitch.addEventListener("change", () => {
-  const newTheme = themeSwitch.checked ? "dark-mode" : "light-mode";
-  applyTheme(newTheme);
-});
+if (themeSwitch) {
+  themeSwitch.addEventListener("change", () => {
+    const newTheme = themeSwitch.checked ? "dark-mode" : "light-mode";
+    applyTheme(newTheme);
+  });
+}
 
 // On load
 const savedTheme = localStorage.getItem("theme") || "dark-mode";
