@@ -270,7 +270,7 @@ body.light-mode .contact-text a {
     color: var(--secondary-color);
     padding: 40px 0;
     text-align: center;
-    display: none; /* Hide by default */
+    display: none; 
 }
 
 .mobile-footer .contact-text-footer {
@@ -406,7 +406,7 @@ h1 {
   }
 
   .countdown div {
-    flex: 0 1 calc(50% - 10px); /* 2 per row with spacing */
+    flex: 0 1 calc(50% - 10px); 
   }
 
     .desktop-footer {
