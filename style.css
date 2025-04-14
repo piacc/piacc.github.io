@@ -209,11 +209,11 @@ p {
   }
   
   .theme-switch .sun {
-    left: 10px;
+    left: 8px;
   }
   
   .theme-switch .moon {
-    right: 10px;
+    right: 8px;
   }
   
   .theme-switch .slider {
