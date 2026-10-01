@@ -81,7 +81,7 @@ header {
 }
 
 .logo {
-    height: 30px;
+    height: 35px;
     width: auto;
     filter: brightness(0) invert(1);
 }
@@ -386,7 +386,7 @@ h1 {
 }
 
 .logo {
-    height: 25px;
+    height: 35px;
     width: auto;
     filter: brightness(0) invert(1);
 
